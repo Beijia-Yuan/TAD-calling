@@ -71,6 +71,7 @@ As Hi-C tends to have a lower resolution, the data should be binned into fixed g
 Once Hi-C data has been processed, the result is a binned genome-wide interaction matrix, in which each section reflects interaction frequency between two loci on the genome. An example of what that may look like is found below.
 
 ![Hi-C Interaction Matrix](./Hi-C_Matrix.jpg)
+*[11]*
 
 ## Finding TADs in Hi-C Maps
 
