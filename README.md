@@ -33,7 +33,8 @@ Due to its usage of next-generation sequencing, Hi-C has the highest through-put
 
 ## The Hi-C Process
 Now that we have discussed why Hi-C is helpful for the discovery of TADs, let’s take a look at a brief overview of the steps that make up the Hi-C process.
-![Hi-C Steps](./Hi-C_Steps.jpg)
+
+![Hi-C Steps](./Hi-C_steps.jpg)
 *Overview of Hi-C (Lieberman-Aiden et al.)*
 
 1. Crosslink the cells with formaldehyde in order to stabilize the chromosomal interactions.
@@ -49,6 +50,7 @@ Now that we have discussed why Hi-C is helpful for the discovery of TADs, let’
 
 ## What should the results be?
 When Hi-C has been properly performed, the results should result in a FASTQ file of bands larger than 10kb. From this point, there are a series of steps to perform in order to process the Hi-C data.
+
 ![Hi-C Processing Flow Chart](./Hi-C_Flow_Chart.jpg)
 
 *Step 1. Read Mapping*
@@ -66,6 +68,7 @@ As Hi-C tends to have a lower resolution, the data should be binned into fixed g
 >In-depth guides on how to process Hi-C data with specific pipelines can be found [here](https://zhonglab.gitbook.io/3dgenome/chapter2-computational-analysis/3.2-higer-order-data-analysis/analytical-pipelines).
 
 Once Hi-C data has been processed, the result is a binned genome-wide interaction matrix, in which each section reflects interaction frequency between two loci on the genome. An example of what that may look like is found below.
+
 ![Hi-C Interaction Matrix](./Hi-C_Matrix.jpg)
 
 ## Finding TADs in Hi-C Maps
