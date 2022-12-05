@@ -56,15 +56,19 @@ When Hi-C has been properly performed, the results should result in a FASTQ file
 *[11]*
 
 *Step 1. Read Mapping*
+
 Using any conventional software, align the reads to the genome of interest. Despite having been sequenced using paired-end reads, paired-end alignment is difficult to use. This is because Hi-C reads consist of fragments from two separate segments of the genome. Instead, a common solution is to map each side of the paired end read independently using a normal alignment technique.
 
 *Step 2. Fragment Assignment*
+
 Every mapped read from Hi-C should align to a restriction fragment, which can be determined ahead of time using the genome sequence. After this has been done, filtering will be performed to remove excess noise from the data.
 
 *Step 3. Filtering*
+
 If read pairs end up mapping within the same restriction fragment, that can mean that the read pair is from an un-ligated fragment or a circularized fragment. These two cases are both unwanted and should therefore be removed from the data. In addition to filtering read pairs within the same fragment, make sure to also filter for PCR artifacts, which can be found as they either share the exact same paired-end sequence or have the same 5’ alignment positions.
 
 *Step 4. Binning*
+
 As Hi-C tends to have a lower resolution, the data should be binned into fixed genomic interval sizes. This reduces the complexity of the possible genomic interactions and increases the signal to noise ratio. Typical sizes for binning range from 40kb to 1Mb. If bins have a very low signal or are very noisy, they likely are from highly repetitive regions or regions with low mappability, such as telomeres and centromeres. Make sure to filter the data for these bins too. [11]
 
 >In-depth guides on how to process Hi-C data with specific pipelines can be found [here](https://zhonglab.gitbook.io/3dgenome/chapter2-computational-analysis/3.2-higer-order-data-analysis/analytical-pipelines).
